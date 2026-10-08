@@ -1,15 +1,16 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function All() {
   const [count, setCount] = useState(0);
 
+  useEffect(() => {
+    console.log("changed"), []
+  })
+
   return(
     <div>
-      <h1>Hi alllll</h1>
-      <h3>Count : { count }</h3>
-      <button onClick={() => { setCount(count + 1) }}>Increment</button>
-      <button onClick={() => { setCount(count - 1) }}>Decrement</button>
-      <button onClick={() => { setCount(0) }}>Reset</button>
+      <button onClick={() => {setCount(count + 1)}}>{count}</button> hi
+      <button onClick={() => {setCount(count + 1)}}>{count}</button> 
     </div>
   )
 };
